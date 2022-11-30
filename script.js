@@ -1,26 +1,16 @@
-
-
-for( let i = 1; i <= 100; i++){
-    console.log(i);
-}
-
 const mainElement = document.querySelector('main');
 
-let newDivElement;
+const button = document.getElementById('play');
 
-for( let k = 0; k < 100; k++){
-    newDivElement = document.createElement('div');
-    mainElement.append(newDivElement);
-}
-
-
-
-
-
-
-
-
-
+button.addEventListener("click", function(){
+    for( let k = 1; k <= 100; k++){
+        let newDivElement = creazioneSquare(k);
+        newDivElement.addEventListener("click", function(){
+            newDivElement.classList.toggle('cyan')
+        })
+        mainElement.append(newDivElement);
+    }
+})
 
 
 // ================================================================================================= //
@@ -28,3 +18,9 @@ for( let k = 0; k < 100; k++){
 // ================================================================================================= //
 // ================================================================================================= //
 
+function creazioneSquare(testo){
+    let element = document.createElement('div');
+    element.innerHTML = testo;
+    element.classList.add('square')
+    return element;
+}
