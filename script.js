@@ -1,8 +1,9 @@
-const mainElement = document.querySelector('main');
+const mainElement = document.querySelector('section');
 
 const button = document.getElementById('play');
 
 button.addEventListener("click", function(){
+    mainElement.innerHTML = '';
     for( let k = 1; k <= 100; k++){
         let newDivElement = creazioneSquare(k);
         newDivElement.addEventListener("click", function(){

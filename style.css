@@ -4,16 +4,42 @@
     box-sizing: border-box;
 }
 
+header{
+    height: 10vh;
+}
+
+main{
+    background-color: #7fffd4;
+    height: 80vh;
+}
+
+section{
+    border: 3px solid;
+    height: 100%;
+    width: 100%;
+}
+
 .square{
-    border: 3px solid magenta;
+    border: 2px solid rgb(0, 0, 0);
     width: calc(100% / 10);
     height: calc(100% / 10);
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 1.3rem;
+    cursor: pointer;
 }
 
 .cyan{
     background-color: aqua;
 }
+
+footer{
+    height: 10vh;
+}
+
+span{
+    color: blueviolet;
+    text-decoration: underline;
+}
+
